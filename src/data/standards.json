@@ -416,7 +416,14 @@
     "cat": "Entra (AAD) Standards",
     "tag": ["highimpact"],
     "helpText": "Enables security defaults for the tenant, for newer tenants this is enabled by default. Do not enable this feature if you use Conditional Access.",
-    "addedComponent": [],
+    "addedComponent": [
+      {
+        "type": "boolean",
+        "label": "Security Defaults State",
+        "name": "standards.SecurityDefaults.state",
+        "default": true
+      }
+    ],
     "label": "Enable Security Defaults",
     "impact": "High Impact",
     "impactColour": "danger"
