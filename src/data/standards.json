@@ -1281,5 +1281,46 @@
     "label": "Set Default Timezone for Tenant",
     "impact": "Low Impact",
     "impactColour": "info"
+  },
+  {
+    "name": "standards.ConfigureTeamsThirdPartyFiles",
+    "cat": "Teams Standards",
+    "tag": ["lowimpact"],
+    "helpText": "Select the file storage and sharing options that you want to be available in the Files tab.",
+    "addedComponent": [
+      {
+        "type": "boolean",
+        "label": "Allow Citrix files",
+        "name": "standards.ConfigureTeamsThirdPartyFiles.AllowShareFile",
+        "default": false
+      },
+      {
+        "type": "boolean",
+        "label": "Allow Dropbox",
+        "name": "standards.ConfigureTeamsThirdPartyFiles.AllowDropbox",
+        "default": false
+      },
+      {
+        "type": "boolean",
+        "label": "Allow Box",
+        "name": "standards.ConfigureTeamsThirdPartyFiles.AllowBox",
+        "default": false
+      },
+      {
+        "type": "boolean",
+        "label": "Allow Google Drive",
+        "name": "standards.ConfigureTeamsThirdPartyFiles.AllowGoogleDrive",
+        "default": false
+      },
+      {
+        "type": "boolean",
+        "label": "Allow Egnyte",
+        "name": "standards.ConfigureTeamsThirdPartyFiles.AllowEgnyte",
+        "default": false
+      }
+    ],
+    "label": "Teams Third Party Files",
+    "impact": "Low Impact",
+    "impactColour": "info"
   }
 ]
