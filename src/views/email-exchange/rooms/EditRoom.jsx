@@ -203,7 +203,7 @@ const EditRoom = () => {
                   <CRow className="mb-3">
                     <CCol md={6}>
                       <CButton type="submit" disabled={submitting}>
-                        Create Room
+                        Edit Room
                       </CButton>
                     </CCol>
                   </CRow>
