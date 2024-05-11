@@ -85,7 +85,7 @@ const AddRoom = () => {
                   <RFFCFormInput
                     name="phone"
                     label="Phone"
-                    type="text"
+                    type="number"
                   />
                   <RFFCFormInput
                     name="nickname"
@@ -101,7 +101,7 @@ const AddRoom = () => {
                   <RFFCFormInput
                     name="floorNumber"
                     label="Floor Number"
-                    type="text"
+                    type="numer"
                   />
                   <RFFCFormInput
                     name="floorLabel"
@@ -148,9 +148,10 @@ const AddRoom = () => {
                     label="Tags"
                     type="text"
                   />
-                  <RFFCFormCheck
+                  <RFFCFormInput
                     name="address.postOfficeBox"
                     label="Post Office Box"
+                    type="text"
                   />
                   <RFFCFormInput
                     name="address.street"
