@@ -81,19 +81,11 @@ const AddRoom = () => {
                     name="geoCoordinates"
                     label="Geo Coordinates"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="phone"
                     label="Phone"
                     type="text"
-                    required
-                  />
-                  <RFFCFormInput
-                    name="placeId"
-                    label="Place ID"
-                    type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="nickname"
@@ -105,109 +97,85 @@ const AddRoom = () => {
                     name="building"
                     label="Building"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="floorNumber"
                     label="Floor Number"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="floorLabel"
                     label="Floor Label"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="label"
                     label="Label"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="capacity"
                     label="Capacity"
                     type="number"
-                    required
                   />
                   <RFFCFormInput
                     name="bookingType"
                     label="Booking Type"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="audioDeviceName"
                     label="Audio Device Name"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="videoDeviceName"
                     label="Video Device Name"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="displayDeviceName"
                     label="Display Device Name"
                     type="text"
-                    required
                   />
                   <RFFCFormCheck
                     name="isWheelChairAccessible"
                     label="Is Wheelchair Accessible"
                     type="checkbox"
-                    required
                   />
                   <RFFCFormInput
                     name="tags"
                     label="Tags"
                     type="text"
-                    required
                   />
-                  <RFFCFormSelect
-                    name="address.type"
-                    label="Address Type"
-                    options={addressTypeOptions}
-                    required
-                  />
-                  <RFFCFormInput
+                  <RFFCFormCheck
                     name="address.postOfficeBox"
                     label="Post Office Box"
-                    type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="address.street"
                     label="Street"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="address.city"
                     label="City"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="address.state"
                     label="State"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="address.countryOrRegion"
                     label="Country or Region"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="address.postalCode"
                     label="Postal Code"
                     type="text"
-                    required
                   />
                   <CRow className="mb-3">
                     <CCol md={6}>
