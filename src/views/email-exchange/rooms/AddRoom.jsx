@@ -69,111 +69,133 @@ const AddRoom = () => {
                     name="emailAddress"
                     label="Email Address"
                     type="email"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="displayName"
                     label="Display Name"
                     type="text"
+                    isRequired={true}
                   />
                   <RFFCFormInput
                     name="geoCoordinates"
                     label="Geo Coordinates"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="phone"
                     label="Phone"
                     type="number"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="nickname"
                     label="Nickname"
                     type="text"
+                    isRequired={true}
                   />
                   <RFFCFormInput
                     name="building"
                     label="Building"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="floorNumber"
                     label="Floor Number"
                     type="numer"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="floorLabel"
                     label="Floor Label"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="label"
                     label="Label"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="capacity"
                     label="Capacity"
                     type="number"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="bookingType"
                     label="Booking Type"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="audioDeviceName"
                     label="Audio Device Name"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="videoDeviceName"
                     label="Video Device Name"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="displayDeviceName"
                     label="Display Device Name"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormCheck
                     name="isWheelChairAccessible"
                     label="Is Wheelchair Accessible"
                     type="checkbox"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="tags"
                     label="Tags"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="address.postOfficeBox"
                     label="Post Office Box"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="address.street"
                     label="Street"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="address.city"
                     label="City"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="address.state"
                     label="State"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="address.countryOrRegion"
                     label="Country or Region"
                     type="text"
+                    isRequired={false}
                   />
                   <RFFCFormInput
                     name="address.postalCode"
                     label="Postal Code"
                     type="text"
+                    isRequired={false}
                   />
                   <CRow className="mb-3">
                     <CCol md={6}>
