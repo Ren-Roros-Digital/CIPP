@@ -79,7 +79,7 @@ const Rooms = () => {
   return (
     <CippPageList
       titleButton={
-        <TitleButton href="/rooms/management/add-room" title="New Room" />
+        <TitleButton href="/rooms/management/edit-room" title="Edit Room" />
       }
       title="Rooms"
       datatable={{
