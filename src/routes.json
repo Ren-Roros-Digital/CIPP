@@ -697,9 +697,9 @@
     "allowedRoles": ["admin", "editor", "readonly"]
   },
   {
-    "path": "/rooms/management/add-room",
-    "name": "Add Room",
-    "component": "views/email-exchange/rooms/AddRoom",
+    "path": "/rooms/management/edit-room",
+    "name": "Edit Room",
+    "component": "views/email-exchange/rooms/EditRoom",
     "allowedRoles": ["admin", "editor", "readonly"]
   },
   {

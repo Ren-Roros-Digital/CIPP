@@ -17,7 +17,7 @@ import { CippPage } from 'src/components/layout/CippPage'
 import { useLazyGenericPostRequestQuery } from 'src/store/api/app'
 import { useSelector } from 'react-redux'
 
-const AddRoom = () => {
+const EditRoom = () => {
   const tenantDomain = useSelector((state) => state.app.currentTenant.defaultDomainName)
 
   const [genericPostRequest, postResults] = useLazyGenericPostRequestQuery()
@@ -51,7 +51,7 @@ const AddRoom = () => {
         postalCode: values.address.postalCode,
       },
     }
-    genericPostRequest({ path: '/api/AddRoom', values: shippedValues })
+    genericPostRequest({ path: '/api/EditRoom', values: shippedValues })
   }
   return (
     <CippPage title="Create Room">
@@ -125,10 +125,13 @@ const AddRoom = () => {
                     type="number"
                     isRequired={false}
                   />
-                  <RFFCFormInput
+                  <RFFCFormSelect
                     name="bookingType"
                     label="Booking Type"
-                    type="text"
+                    values={[
+                      { value: 'standard', label: 'standard' },
+                      { value: 'reserved', label: 'reserved' },
+                    ]}
                     isRequired={false}
                   />
                   <RFFCFormInput
@@ -222,4 +225,4 @@ const AddRoom = () => {
   )
 }
 
-export default AddRoom
+export default EditRoom

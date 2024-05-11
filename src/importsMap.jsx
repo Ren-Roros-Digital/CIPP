@@ -102,7 +102,7 @@ import React from 'react'
   "/email/spamfilter/deploy": React.lazy(() => import('./views/email-exchange/spamfilter/DeploySpamfilter')), 
   "/email/spamfilter/list-templates": React.lazy(() => import('./views/email-exchange/spamfilter/ListSpamfilterTemplates')), 
   "/rooms/management/list-rooms": React.lazy(() => import('./views/email-exchange/rooms/ListRooms')), 
-  "/rooms/management/add-room": React.lazy(() => import('./views/email-exchange/rooms/AddRoom')), 
+  "/rooms/management/edit-room": React.lazy(() => import('./views/email-exchange/rooms/EditRoom')), 
   "/rooms/management/room-lists": React.lazy(() => import('./views/email-exchange/rooms/ListRoomLists')), 
   "/email/tools/mailbox-restore-wizard": React.lazy(() => import('./views/email-exchange/tools/MailboxRestoreWizard')), 
   "/email/tools/mailbox-restores": React.lazy(() => import('./views/email-exchange/tools/MailboxRestores')), 
