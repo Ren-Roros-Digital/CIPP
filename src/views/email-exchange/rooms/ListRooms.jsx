@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import { CippPageList } from 'src/components/layout'
 import { CellTip } from 'src/components/tables'
+import { TitleButton } from 'src/components/buttons'
 
 const Rooms = () => {
   const tenant = useSelector((state) => state.app.currentTenant)
