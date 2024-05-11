@@ -69,13 +69,11 @@ const AddRoom = () => {
                     name="emailAddress"
                     label="Email Address"
                     type="email"
-                    required
                   />
                   <RFFCFormInput
                     name="displayName"
                     label="Display Name"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="geoCoordinates"
@@ -91,7 +89,6 @@ const AddRoom = () => {
                     name="nickname"
                     label="Nickname"
                     type="text"
-                    required
                   />
                   <RFFCFormInput
                     name="building"
