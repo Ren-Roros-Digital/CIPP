@@ -697,6 +697,12 @@
     "allowedRoles": ["admin", "editor", "readonly"]
   },
   {
+    "path": "/rooms/management/add-room",
+    "name": "Add Room",
+    "component": "views/email-exchange/rooms/AddRoom",
+    "allowedRoles": ["admin", "editor", "readonly"]
+  },
+  {
     "path": "/rooms/management/room-lists",
     "name": "Room Lists",
     "component": "views/email-exchange/rooms/ListRoomLists",
