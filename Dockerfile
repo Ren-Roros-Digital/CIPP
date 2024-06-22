@@ -31,7 +31,7 @@ RUN powershell.exe -Command \
 RUN powershell.exe -Command \
     mkdir 'C:\CIPP-Dev'; \
     cd 'C:\CIPP-Dev'; \
-    git clone $env_cippurl--origin $env_cipporigin; \
+    git clone $env_cippurl --origin $env_cipporigin; \
     git clone $env_cippapiurl --origin $env_cipporigin; \
     cd 'C:\CIPP-Dev\CIPP'; \
     git remote add upstream https://github.com/KelvinTegelaar/CIPP; \
