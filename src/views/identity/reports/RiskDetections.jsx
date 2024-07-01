@@ -1,6 +1,23 @@
+import {
+  CButton,
+  CCard,
+  CCardBody,
+  CCardHeader,
+  CCardTitle,
+  CCol,
+  CCollapse,
+  CForm,
+  CRow,
+} from '@coreui/react'
+import { faChevronDown, faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useState } from 'react'
+import { Form } from 'react-final-form'
 import { useSelector } from 'react-redux'
 import { CippPageList } from 'src/components/layout'
 import { CellTip } from 'src/components/tables'
+import { RFFCFormInput } from 'src/components/forms'
+import useQuery from 'src/hooks/useQuery'
 
 const columns = [
   {
@@ -8,6 +25,7 @@ const columns = [
     selector: (row) => row['detectedDateTime'],
     sortable: true,
     exportSelector: 'detectedDateTime',
+    minWidth: '200px',
   },
   {
     name: 'User Principal Name',
@@ -74,9 +92,91 @@ const columns = [
 
 const RiskDetections = () => {
   const tenant = useSelector((state) => state.app.currentTenant)
+  let query = useQuery()
+  const filter = query.get('filter')
+  const DateFilter = query.get('DateFilter')
+  const [searchParams, setSearchParams] = useState({})
+  const [visibleA, setVisibleA] = useState(true)
+
+  const handleSubmit = async (values) => {
+    Object.keys(values).filter(function (x) {
+      if (values[x] === null) {
+        delete values[x]
+      }
+      return null
+    })
+    const shippedValues = {
+      SearchNow: true,
+      ...values,
+    }
+    setSearchParams(shippedValues)
+  }
 
   return (
     <>
+      <CRow>
+        <CCol>
+          <CCard className="options-card">
+            <CCardHeader>
+              <CCardTitle className="d-flex justify-content-between">
+                Risk Detection Settings
+                <CButton
+                  size="sm"
+                  variant="ghost"
+                  className="stretched-link"
+                  onClick={() => setVisibleA(!visibleA)}
+                >
+                  <FontAwesomeIcon icon={visibleA ? faChevronDown : faChevronRight} />
+                </CButton>
+              </CCardTitle>
+            </CCardHeader>
+          </CCard>
+          <CCollapse visible={visibleA}>
+            <CCard className="options-card">
+              <CCardHeader></CCardHeader>
+              <CCardBody>
+                <Form
+                  initialValues={{
+                    filter: filter,
+                    DateFilter: DateFilter,
+                  }}
+                  onSubmit={handleSubmit}
+                  render={({ handleSubmit, submitting, values }) => {
+                    return (
+                      <CForm onSubmit={handleSubmit}>
+                        <CRow>
+                          <CCol>
+                            <RFFCFormInput type="number" name="Days" label="Days" placeholder="7" />
+                          </CCol>
+                        </CRow>
+                        <CRow>
+                          <CCol>
+                            <RFFCFormInput
+                              type="text"
+                              name="filter"
+                              label="Custom Filter"
+                              placeholder="riskState eq atRisk"
+                            />
+                          </CCol>
+                        </CRow>
+                        <CRow className="mb-3">
+                          <CCol>
+                            <CButton type="submit" disabled={submitting}>
+                              <FontAwesomeIcon icon={faSearch} className="me-2" />
+                              Search
+                            </CButton>
+                          </CCol>
+                        </CRow>
+                      </CForm>
+                    )
+                  }}
+                />
+              </CCardBody>
+            </CCard>
+          </CCollapse>
+        </CCol>
+      </CRow>
+      <hr />
       <CippPageList
         title="Risk Detection Report"
         capabilities={{ allTenants: true, helpContext: 'https://google.com' }}
