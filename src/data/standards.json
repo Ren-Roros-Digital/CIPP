@@ -1757,6 +1757,34 @@
     "recommendedBy": []
   },
   {
+    "name": "standards.InTuneMDMScope",
+    "cat": "Intune Standards",
+    "tag": ["lowimpact"],
+    "helpText": "Sets the MDM scope for the tenant.",
+    "addedComponent": [
+      {
+        "type": "Select",
+        "name": "standards.InTuneMDMScope.appliesTo",
+        "label": "MDM scope",
+        "values": [
+          {
+            "label": "All",
+            "value": "all"
+          },
+          {
+            "label": "None",
+            "value": "none"
+          }
+        ]
+      }
+    ],
+    "label": "Set MDM scope",
+    "impact": "Low Impact",
+    "impactColour": "info",
+    "powershellEquivalent": "InTune Automatic Enrollment",
+    "recommendedBy": []
+  },
+  {
     "name": "standards.intuneDeviceReg",
     "cat": "Intune Standards",
     "tag": ["mediumimpact"],
