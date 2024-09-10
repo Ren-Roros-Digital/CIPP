@@ -580,6 +580,12 @@
     "allowedRoles": ["admin", "editor", "readonly"]
   },
   {
+    "path": "/endpoint/reports/device-score-report",
+    "name": "Device Score Report",
+    "component": "views/endpoint/reports/EndpointAnalyticsDeviceScore",
+    "allowedRoles": ["admin", "editor", "readonly"]
+  },
+  {
     "path": "/security/defender",
     "name": "Defender",
     "allowedRoles": ["admin", "editor", "readonly"]

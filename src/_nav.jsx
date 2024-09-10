@@ -567,6 +567,20 @@ const _nav = [
     ],
   },
   {
+    component: CNavGroup,
+    name: 'Reports',
+    section: 'Intune',
+    to: '/endpoint/reports',
+    icon: <FontAwesomeIcon icon={faChartBar} className="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Device Score Report',
+        to: '/endpoint/reports/device-score-report',
+      },
+    ],
+  },
+  {
     component: CNavTitle,
     name: 'Teams & Sharepoint',
   },

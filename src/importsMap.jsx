@@ -88,6 +88,7 @@ import React from 'react'
   "/endpoint/MEM/add-policy": React.lazy(() => import('./views/endpoint/intune/MEMAddPolicy')), 
   "/endpoint/MEM/add-policy-template": React.lazy(() => import('./views/endpoint/intune/MEMAddPolicyTemplate')), 
   "/endpoint/MEM/list-templates": React.lazy(() => import('./views/endpoint/intune/MEMListPolicyTemplates')), 
+  "/endpoint/reports/device-score-report": React.lazy(() => import('./views/endpoint/reports/EndpointAnalyticsDeviceScore')), 
   "/security/defender/deployment": React.lazy(() => import('./views/security/defender/DeployDefender')), 
   "/security/defender/list-defender": React.lazy(() => import('./views/security/defender/ListDefender')), 
   "/security/defender/list-defender-tvm": React.lazy(() => import('./views/security/defender/ListVuln')), 
